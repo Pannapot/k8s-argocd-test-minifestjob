@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: test-hook
+  #name: test-hook
   generateName: schema-migrate-
   annotations:
     argocd.argoproj.io/hook: PreSync
