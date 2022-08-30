@@ -5,6 +5,7 @@ metadata:
   generateName: schema-migrate-
   annotations:
     argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
@@ -14,5 +15,3 @@ spec:
         command: ["perl",  "-Mbignum=bpi", "-wle", "print bpi(2000)"]
       restartPolicy: Never
   backoffLimit: 1
-  activeDeadlineSeconds: 60
-  ttlSecondsAfterFinished: 60
